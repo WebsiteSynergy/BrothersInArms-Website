@@ -73,7 +73,7 @@
   }
 
   #mainNav.navbar-shrink .navbar-brand.abs {
-    top: 25px;
+    top: 20px;
   }
 
   #mainNav.navbar-shrink .navbar-brand.abs img {
@@ -126,16 +126,10 @@ section {
 }
 
 .col-icon {
-  max-width:3.5rem !important;
+  max-width:3rem !important;
 }
 
-.col-icon.left {
-  margin-right: 1rem;
-}
 
-.col-icon.right {
-  margin-left: 1rem;
-}
 
 .masthead .col {
   padding: 0.3rem;
