@@ -72,10 +72,13 @@
     background-color: #212529;
   }
 
+  #mainNav.navbar-shrink .navbar-brand.abs {
+    top: 25px;
+  }
+
   #mainNav.navbar-shrink .navbar-brand.abs img {
-    width: 128px;
-    height: 128px;
-    display: none;
+    width: 158px;
+    height: auto;
   }
 
   #mainNav.navbar-shrink .navbar-nav{
@@ -89,8 +92,8 @@ header {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  padding-top: 17rem !important;
-  padding-bottom: 12.5rem !important;
+  padding-top: 7rem !important;
+  padding-bottom: 4rem !important;
 }
 
 .masthead-heading {
@@ -98,7 +101,7 @@ header {
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 4.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .handwriting {
@@ -113,6 +116,36 @@ header {
   margin-top: 1rem;
 }
 
+.masthead .col {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+}
+
 section {
   padding:1.5rem;
+}
+
+.col-icon {
+  max-width:3.5rem !important;
+}
+
+.col-icon.left {
+  margin-right: 1rem;
+}
+
+.col-icon.right {
+  margin-left: 1rem;
+}
+
+.masthead .col {
+  padding: 0.3rem;
+}
+
+.gold-writing {
+  color: #fcb228;
+}
+
+.man-logo {
+  padding-bottom: 3rem;
+  transform:translateX(0px);
 }
