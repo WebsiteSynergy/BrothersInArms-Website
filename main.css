@@ -1,0 +1,118 @@
+.navbar {
+  background-color: black;
+}
+
+.nav-link {
+  color: lightgray;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+  padding: 1rem !important;
+}
+
+.nav-link:hover {
+  color: #ffc800 !important;
+}
+
+.navbar-text {
+  line-height: 1.3rem;
+  display: none;
+  top: 17px !important;
+  color: white !important;
+}
+
+#mainNav.navbar-shrink .navbar-text {
+  display: initial;
+  color: #ffc800 !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand.abs{
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0%);
+    text-align: center;
+  }
+  .navbar-brand.abs img {
+    width: 160px;
+    height: 160px;
+  }
+  .navbar {
+    height: 6rem;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+  .navbar-nav{
+    margin-right: 110px;
+    margin-left: 110px;
+    margin-top: 90px;
+    font-size: large;
+  }
+  .nav-link {
+    color: whitesmoke !important;
+  }
+
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+    background-color: transparent;
+  }
+  
+  #mainNav.navbar-shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
+  }
+
+  #mainNav.navbar-shrink .navbar-brand.abs img {
+    width: 64px;
+    height: 64px;
+    display: none;
+  }
+
+  #mainNav.navbar-shrink .navbar-nav{
+    margin-top: 0px;
+  }
+}
+
+header {
+  background-image: url("https://images.unsplash.com/photo-1522244451342-a41bf8a13d73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 17rem !important;
+  padding-bottom: 12.5rem !important;
+}
+
+.masthead-heading {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.handwriting {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 5rem;
+  color: #fcb228;
+}
+
+.masthead-subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+section {
+  padding:1.5rem;
+}
