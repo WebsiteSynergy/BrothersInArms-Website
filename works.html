@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>A pure CSS parallax feature detection demo by Keith Clark</title>
+<style>
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body {
+    font: 120% / 1.5 Arial;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, p {
+    margin-bottom: 1.5em;
+  }
+
+
+  /* slide layout
+  --------------------------------------------- */
+
+  .slide {
+    position: relative;
+    padding: 40% 5%;
+  }
+  .slide__content {
+    max-width: 45em;
+    margin: auto;
+  }
+
+  .slide__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  /* slide backgrounds */
+
+  #slide-1 .slide__bg {
+    background-image: repeating-linear-gradient(
+      rgb(102, 204, 102),
+      rgb(102, 204, 102) 30px,
+      rgb(92, 184, 92) 30px,
+      rgb(92, 184, 92) 60px
+    );
+  }  
+
+
+  /* misc
+  --------------------------------------------- */
+
+  .demo__info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 80%;
+    text-align:center;
+    z-index: 100;
+  }
+
+  .status, .demo__info {
+    padding: 0.5em;
+    background: rgba(255, 255, 255, .5);
+  }
+  .status::before {
+    content: 'CSS Parallax is: NOT SUPPORTED';
+    color: #c00;
+    display: block;
+  }
+  .status::after {
+    content: 'CSS Parallax is: DISABLED';
+    color: #c00;
+  }
+
+
+  /* parallax */
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    .status::before {
+      content: 'CSS Parallax is: SUPPORTED';
+      color: #090;
+    }
+  }
+
+  /* Large screen layout
+  --------------------------------------------- */ 
+   
+  @media screen and (min-width: 45em) {
+
+    /* parallax */
+    @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+      html, body {
+        overflow: hidden;
+        height:100%;
+      }
+      body {
+        transform: translateZ(0px); /* Fix paint issues in Edge && Safari H/W acceleration */
+      }
+      .status::after {
+        content: 'CSS Parallax is: ENABLED';
+        color: #090;
+      }
+      .slides {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        perspective: 300px;
+        perspective-origin: 100% 100%;
+      }
+      .slide, .slide__content {
+        transform-style: preserve-3d;
+        transform: translateZ(0); /* Safari H/W acceleration */
+      }
+      .slide__bg {
+        transform: translateZ(-150px) scale(1.5);
+        transform-origin: 100% 100%;
+      }
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="demo__info">
+    Pure CSS parallax scrolling feature detection demo by Keith Clark. Please read the <a href="../">blog post</a> for more information.
+  </div>
+
+  <div class="slides">
+    <div class="slide" id="slide-1">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <div class="slide__text">
+          <h1 id="css-parallax-feature-detection">CSS Parallax Feature Detection</h1>
+          <p class="status"></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. </p>
+
+          <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+
+          <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. </p>
+
+          <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. </p>
+
+          <p>Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. </p>
+
+          <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+
+          <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-10812217-1', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
