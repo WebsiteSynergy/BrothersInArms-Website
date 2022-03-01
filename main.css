@@ -178,6 +178,10 @@ header.masthead .countdown #countdownText{
     padding: 5rem;
     padding-top: 0;
   }
+
+  #history .col-sm-3 {
+    display: initial !important;
+  }
 }
 
 .google-maps {
@@ -247,4 +251,8 @@ header.masthead .countdown #countdownText{
 
 #history .row {
   align-items: stretch !important;
+}
+
+#history .col-sm-3 {
+  display: none;
 }
