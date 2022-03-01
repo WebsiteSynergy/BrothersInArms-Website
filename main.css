@@ -16,7 +16,7 @@
   line-height:1.3rem;
   display:none;
   top:17px!important;
-  color:#fff!important
+  color:#fff!important;
 }
 @media (min-width:768px){
   .navbar-brand.abs{
@@ -25,7 +25,9 @@
       left:50%;
       top:55px;
       transform:translate(-50%,0);
-      text-align:center
+      text-align:center;
+
+      transition: ease-in-out top 0.15s;
   }
   .navbar-brand.abs img{
       width:256px;
@@ -44,16 +46,18 @@
       margin-right:180px;
       margin-left:180px;
       margin-top:90px;
-      font-size:large
+      font-size:large;
   }
   .nav-link{
-      color:#f5f5f5!important
+      color:#f5f5f5!important;
   }
   #mainNav{
       padding-top:1.5rem;
       padding-bottom:1.5rem;
       border:none;
-      background-color:transparent
+      background-color:transparent;
+
+      transition: ease-in-out top 0.1s, padding-top 0.1s;
   }
 
   #mainNav.navbar-shrink {
@@ -69,6 +73,7 @@
   #mainNav.navbar-shrink .navbar-brand.abs img {
     width: 158px;
     height: auto;
+    transition: ease-in-out width 0.15s, height 0.15s;
   }
 
   #mainNav.navbar-shrink .navbar-nav{
