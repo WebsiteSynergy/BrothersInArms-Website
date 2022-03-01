@@ -172,3 +172,63 @@ header.masthead .countdown #countdownText{
 .navbar button {
   font-size: 1rem;
 }
+
+@media (min-width: 768px) {
+  #maps .row {
+    padding: 5rem;
+    padding-top: 0;
+  }
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#maps .row {
+  margin-top: 2rem;
+}
+
+.piccollage {
+  padding: 10px;
+}
+
+.historypic1 {
+  background-image:url(assets/background.jpg);
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-position:center center;
+  background-size:cover;
+  height: 90px;
+  margin: 5px;
+}
+
+.historypic2 {
+  background-image:url(assets/background.jpg);
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-position:center center;
+  background-size:cover;
+  height: 90px;
+  margin: 5px;
+}
+
+.historypic3 {
+  background-image:url(assets/background.jpg);
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-position:center center;
+  background-size:cover;
+  height: 90px;
+  margin: 5px;
+}
