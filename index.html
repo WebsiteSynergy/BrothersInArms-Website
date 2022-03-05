@@ -16,10 +16,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kavivanar">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine:wght@600&family=Roboto&display=swap" rel="stylesheet"> 
 
     <title>Hello, world!</title>
   </head>
@@ -50,9 +47,14 @@
         <div class="countdown">
             OPENING IN:<div id="countdownText"></div>
         </div>
-        <div>
+        <div class="container-fluid">
+          <div class="row justify-content-center row-cols-1 row-cols-sm-1 row-cols-md-2">
+            <div class="col">
             <div class="row">
-              <div class="col text-end">
+              <div class="col col-icon left gold-writing">
+                <i class="bi bi-geo"></i>
+            </div>
+              <div class="col">
                 <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Samuel's+Family+Farm+Shop+%26+Butchers,+Old+Farm,+Market+Ln,+Walpole+St+Andrew,+Walpole+Cross+Keys,+Wisbech+PE14+7LT">
                 Old Farm<br>
                 Market Lane<br>
@@ -61,10 +63,11 @@
                 PE14 7LT
               </a>
               </div>
-              <div class="col col-icon left gold-writing">
-                <i class="bi bi-geo"></i>
+              </div>
             </div>
-            <div class="col col-icon right gold-writing text-end">
+            <div class="col">
+              <div class="row justify-content-center mt-1">
+            <div class="col col-icon right gold-writing">
                 <i class="bi bi-clock"></i>
             </div>
               <div class="col text-start">
@@ -72,6 +75,7 @@
                 <span class="gold-writing">SUN</span>: 8AM-4PM
               </div>
             </div>
+          </div>
           </div>
     </header>
 
@@ -87,15 +91,21 @@
                   <div class="col historypic3"></div>
                 </div>
             </div>
-            <div class="col-sm-8"><h2 class="section-heading text-uppercase">OUR HISTORY</h2><p style="text-align: justify;">Next Level1 Flooring Norfolk was established by two friends who share the same passion and commitment to the trade. With over 25 years of experience, you can rely on us to provide you with the highest quality of craftsmanship and products suited for the job in hand.
-              <br><br>
-              We specialise in all areas of contract and industrial floor coverings. With our expertise we can provide safety flooring in a wide range of sectors including wet room adaptations. We have the solutions to suit the needs of the client, also offering full preparation work ranging from latexing through to damp proof membrane.
-              <br><br>
-              We also provide domestic flooring varying from Luxury Vinyl Tiles (LVT), domestic vinyl, and carpets. With a wide selection of samples, we can offer in-home measure and quotation services, helping you choose your perfect flooring guaranteed to transform your house into a home.</div>
-            </p>
+            <div class="col-sm-8"><h2 class="section-heading text-uppercase">OUR HISTORY</h2><p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at mauris sit amet nisl finibus varius. Donec id purus condimentum, cursus diam eu, varius leo. Suspendisse posuere libero vel rhoncus vulputate. Suspendisse ipsum ipsum, aliquet ac mauris vitae, aliquam hendrerit nibh.<br><br> Pellentesque sagittis, quam non mattis viverra, quam ligula fringilla tellus, ac euismod sapien odio ac nulla. Quisque condimentum tellus sit amet urna facilisis mollis. Duis ac nunc mi. Pellentesque euismod feugiat tortor, auctor sagittis quam condimentum id. Ut eget vestibulum lectus, at facilisis quam. Fusce quis scelerisque arcu, quis condimentum eros.<br><br> Fusce quis elementum eros. Morbi venenatis, nibh sit amet elementum ornare, felis libero volutpat risus, in efficitur dolor nisi ac magna. Curabitur vel venenatis ipsum, sit amet semper lectus. Nam a nunc ac erat venenatis vehicula eleifend sed ipsum. Donec eu massa sem. </p>
             </div>
       </div>
   </section>
+
+  <section class="page-section slide" id="menu">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">MENU</h2>
+        <br>
+        <p>Check out the menu below!</p>
+        <img id="menuIcon" src="assets/menu.svg">
+      </div>
+    </div>
+</section>
 
     <section class="page-section" id="maps">
         <div class="container">

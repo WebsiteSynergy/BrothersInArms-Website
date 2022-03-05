@@ -3,7 +3,7 @@
 }
 .nav-link{
   color:#d3d3d3;
-  font-family:Montserrat,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: 'Roboto', sans-serif;;
   font-size:1.1rem;
   color:#fff;
   letter-spacing:.0625em;
@@ -86,7 +86,7 @@ header{
   background-attachment:scroll;
   background-position:center center;
   background-size:cover;
-  padding-top:7rem!important;
+  padding-top:6rem!important;
   padding-bottom:2rem!important;
 }
 .masthead-heading{
@@ -97,14 +97,14 @@ header{
   margin-bottom:5rem;
 }
 .masthead{
-  font-family:'Bebas Neue',cursive;
-  font-size:1.3rem;
+  font-family:"Bebas Neue", Arial, Helvetica, sans-serif;
+  font-size:1.7rem;
 }
 section{
   padding:1.5rem;
 }
 .col-icon{
-  max-width:2.2rem!important;
+  max-width:2.3rem!important;
 }
 .masthead .col{
   padding:.3rem;
@@ -141,7 +141,7 @@ header.masthead .countdown{
   font-style: italic;
 }
 header.masthead .countdown #countdownText{
-  font-size:3rem
+  font-size:3rem;
 }
 @media (min-width: 768px) {
   header.masthead {
@@ -167,11 +167,6 @@ header.masthead .countdown #countdownText{
 #mainNav.navbar-shrink .navbar-text {
   display: initial;
   color: #ffc800 !important;
-}
-
-.masthead .row {
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .navbar button {
@@ -267,4 +262,42 @@ header.masthead .countdown #countdownText{
     text-align: center;
     padding-bottom: 1rem;
   }
+}
+
+#menu {
+  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYgv_7WcHGDMSb2j_ZbjdqXWr9s0UEumDMag&usqp=CAU);
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-position:center center;
+  background-size:cover;
+  padding-bottom:0 !important;
+}
+
+#menuIcon {
+  width: 140px;
+  height: auto;
+
+  transform: translate(-10px, 40px);
+  z-index: 2;
+  position: relative;
+  transition: ease-in-out transform 0.2s;
+}
+
+#menuIcon:hover {
+  transform: translate(-10px, 20px);
+}
+
+#maps {
+  z-index: 99;
+  position: relative;
+  background: #222;
+}
+
+h2 {
+  font-family: 'Domine', serif;
+  font-size: 2.5rem;
+}
+
+.masthead .col {
+  max-width: 250px;
 }
