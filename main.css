@@ -301,3 +301,10 @@ h2 {
 .masthead .col {
   max-width: 250px;
 }
+
+.btn.btn-dark.btn-social {
+  background-color: #222;
+  border-color:#222
+  
+}
+  
