@@ -301,3 +301,12 @@ h2 {
 .masthead .col {
   max-width: 250px;
 }
+
+.email,
+.email:link,
+.email:visited,
+.email:hover,
+.email:active {
+  text-decoration: none; 
+  color: #fcb228 !important;
+}
