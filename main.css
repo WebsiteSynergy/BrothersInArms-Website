@@ -79,6 +79,17 @@
   #mainNav.navbar-shrink .navbar-nav{
     margin-top: 0px;
   }
+
+  .masthead .masthead-col {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .google-maps iframe {
+    padding: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 header{
   background-image:url(assets/background.jpg);
@@ -105,9 +116,6 @@ section{
 }
 .col-icon{
   max-width:2.3rem!important;
-}
-.masthead .col{
-  padding:.3rem;
 }
 
 .masthead a{
@@ -162,6 +170,18 @@ header.masthead .countdown #countdownText{
   .masthead{
     font-size:1.8rem
   }
+
+  .carousel .carousel-item {
+    height: 360px;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 360px;
+  }
 }
 
 #mainNav.navbar-shrink .navbar-text {
@@ -182,21 +202,15 @@ header.masthead .countdown #countdownText{
   #history .col-sm-3 {
     display: initial !important;
   }
-}
 
-.google-maps {
-  position: relative;
-  padding-bottom: 75%;
-  height: 0;
-  overflow: hidden;
+  div.masthead-col:nth-child(1) {
+    justify-content: flex-end;
+    display: grid;
+  }
 }
 
 .google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
+  max-width: 100%;
 }
 
 #maps .row {
@@ -262,10 +276,14 @@ header.masthead .countdown #countdownText{
     text-align: center;
     padding-bottom: 1rem;
   }
+
+  .row-cols-1 {
+    display: grid;
+  }
 }
 
 #menu {
-  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYgv_7WcHGDMSb2j_ZbjdqXWr9s0UEumDMag&usqp=CAU);
+  background-image:url(assets/menu.jpg);
   background-repeat:no-repeat;
   background-attachment:scroll;
   background-position:center center;
@@ -291,6 +309,7 @@ header.masthead .countdown #countdownText{
   z-index: 99;
   position: relative;
   background: #222;
+  padding-top: 2rem;
 }
 
 h2 {
@@ -298,15 +317,11 @@ h2 {
   font-size: 2.5rem;
 }
 
-.masthead .col {
-  max-width: 250px;
-}
-
-.email,
-.email:link,
-.email:visited,
-.email:hover,
-.email:active {
+.gold-link,
+.gold-link:link,
+.gold-link:visited,
+.gold-link:hover,
+.gold-link:active {
   text-decoration: none; 
   color: #fcb228 !important;
 }
