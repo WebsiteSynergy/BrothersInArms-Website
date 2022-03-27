@@ -171,6 +171,10 @@ header.masthead .countdown #countdownText{
     font-size:1.8rem
   }
 
+  .carousel {
+    margin-left: 1.5rem !important;
+  }
+
   .carousel .carousel-item {
     height: 360px;
   }
