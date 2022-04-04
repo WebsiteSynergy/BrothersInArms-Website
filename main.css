@@ -107,10 +107,17 @@ header{
   line-height:4.5rem;
   margin-bottom:5rem;
 }
-.masthead{
+.masthead,
+#maps .row{
   font-family:"Bebas Neue", Arial, Helvetica, sans-serif;
   font-size:1.7rem;
 }
+
+.masthead a,
+#maps .row a{
+  text-decoration: none !important;
+}
+
 section{
   padding:1.5rem;
 }
@@ -118,11 +125,8 @@ section{
   max-width:2.3rem!important;
 }
 
-.masthead a{
-  text-decoration: none !important;
-}
-
-.masthead a:link {
+.masthead a:link,
+#maps .row a:link{
   text-decoration: none;
   color:var(--bs-body-color);
 }
