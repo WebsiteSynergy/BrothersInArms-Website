@@ -189,6 +189,14 @@ header.masthead .countdown #countdownText {
         justify-content: flex-end;
         display: grid
     }
+
+    #historyModal .img1 {
+        padding-left: 10px;
+    }
+
+    #historyModal .img2 {
+        padding-right: 15px;   
+    }
 }
 
 .navbar button {
@@ -223,6 +231,12 @@ header.masthead .countdown #countdownText {
 
     .row-cols-1 {
         display: grid
+    }
+
+    #historyModal img {
+        width: 100%;
+        padding-top:10px;
+        padding-bottom:10px;
     }
 }
 
