@@ -252,6 +252,11 @@ h2 {
     font: 2.5rem 'Domine', serif
 }
 
+a:visited {
+    text-decoration: none;
+    color:var(--bs-body-color);
+  }
+
 .gold-link,
 .gold-link:link,
 .gold-link:visited,
