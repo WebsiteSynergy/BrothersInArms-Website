@@ -90,7 +90,7 @@
 }
 
 header {
-    background: url(assets/background.jpg) no-repeat scroll center center;
+    background: url(../images/background.jpg) no-repeat scroll center center;
     background-size: cover;
     padding-top: 6rem !important;
     padding-bottom: 2rem !important
@@ -241,7 +241,7 @@ header.masthead .countdown #countdownText {
 }
 
 #menu {
-    background: url(assets/menu.jpg) no-repeat scroll center center;
+    background: url(../images/menu.jpg) no-repeat scroll center center;
     background-size: cover;
     padding-bottom: 0 !important
 }
