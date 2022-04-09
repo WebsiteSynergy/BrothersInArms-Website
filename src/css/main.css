@@ -124,7 +124,7 @@ section {
     color: #fcb228
 }
 
-#history {
+#about {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem
 }
@@ -165,12 +165,8 @@ header.masthead .countdown #countdownText {
         font-size: 1.8rem
     }
 
-    .carousel {
-        margin-left: 1.5rem !important
-    }
-
     .carousel .carousel-item {
-        height: 360px
+        height: 250px
     }
 
     .carousel-item img {
@@ -178,11 +174,7 @@ header.masthead .countdown #countdownText {
         object-fit: cover;
         top: 0;
         left: 0;
-        min-height: 360px
-    }
-
-    #maps .row {
-        padding: 0 5rem 5rem
+        min-height: 250px
     }
 
     div.masthead-col:nth-child(1) {
@@ -197,6 +189,13 @@ header.masthead .countdown #countdownText {
     #historyModal .img2 {
         padding-right: 15px;   
     }
+    
+    #about,
+    #menu,
+    #maps,
+    #maps {
+        scroll-margin-top: 96px;
+    }
 }
 
 .navbar button {
@@ -204,11 +203,9 @@ header.masthead .countdown #countdownText {
 }
 
 .google-maps iframe {
-    max-width: 100%
-}
-
-#maps .row {
-    margin-top: 2rem
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .col-sm-3>div:nth-child(1) {
@@ -219,12 +216,12 @@ header.masthead .countdown #countdownText {
     min-height: 50%
 }
 
-#history .row {
+#about .row {
     align-items: stretch !important
 }
 
 @media (max-width:768px) {
-    #history .section-heading {
+    #about .section-heading {
         text-align: center;
         padding-bottom: 1rem
     }
@@ -237,6 +234,26 @@ header.masthead .countdown #countdownText {
         width: 100%;
         padding-top:10px;
         padding-bottom:10px;
+    }
+
+    #about button {
+        margin-bottom: 20px;
+    }
+
+    div.masthead-col:nth-child(2) {
+        padding-top: 20px;
+    }
+
+    #about,
+    #menu,
+    #maps,
+    #maps {
+        scroll-margin-top: 66px;
+    }
+
+    #maps,
+    #maps .container {
+        padding: 0rem;
     }
 }
 
@@ -291,4 +308,8 @@ pre {
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+footer i {
+    font-size: 1.5rem;
 }
