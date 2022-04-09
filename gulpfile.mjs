@@ -1,18 +1,16 @@
 /* eslint-disable require-jsdoc */
 'use strict';
 
-import autoprefixer from "gulp-autoprefixer";
-import csso from "gulp-csso";
 import del from "del";
 import gulp from "gulp";
 import htmlmin from "gulp-htmlmin";
 import uglify from "gulp-uglify";
-import rename from "gulp-rename";
-import through2 from "through2";
 import CleanCSS from "clean-css";
 import concat from "gulp-concat";
 import image from 'gulp-image';
 import browserSync from 'browser-sync';
+import imagemin from 'imagemin';
+import imageminWebp from 'imagemin-webp';
 
 const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -71,6 +69,29 @@ function images(cb) {
   .pipe(browserSync.stream());
 }
 
+async function webpImages() {
+  const outputFolder = 'dist/images/';
+
+	await imagemin(['dist/images/*.png'], {
+    destination: outputFolder,
+    plugins: [
+      imageminWebp({
+        lossless: true
+      })
+    ]
+  })
+  console.log('PNGs processed')
+  await imagemin(['dist/images/*.{jpg,jpeg}'], {
+    destination: outputFolder,
+    plugins: [
+      imageminWebp({
+        quality: 60
+      })
+    ]
+  })
+  console.log('JPGs and JPEGs processed')
+}
+
 // Clean output directory
 function clean(cb) {
   del('dist');
@@ -90,4 +111,4 @@ export function serve(cb) {
   gulp.watch("src/css/*.css").on('change', css);
 }
 
-export default gulp.series(gulp.parallel(html, css, js, images));
+export default gulp.series(gulp.parallel(html, css, js, images), webpImages);

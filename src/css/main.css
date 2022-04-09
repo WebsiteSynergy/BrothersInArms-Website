@@ -89,9 +89,19 @@
     }
 }
 
+.webp header {
+    background: url(../images/background.webp) center center/cover no-repeat;
+}
+
+.no-webp header {
+    background: url(../images/background.webp) center center/cover no-repeat;
+}
+
+.no-js header {
+    background: url(../images/background.webp) center center/cover no-repeat;
+}
+
 header {
-    background: url(../images/background.jpg) no-repeat scroll center center;
-    background-size: cover;
     padding-top: 6rem !important;
     padding-bottom: 2rem !important
 }
@@ -257,9 +267,19 @@ header.masthead .countdown #countdownText {
     }
 }
 
+.webp #menu {
+    background: url(../images/menu.webp) center center/cover no-repeat;
+}
+
+.no-webp #menu {
+    background: url(../images/menu.jpg) center center/cover no-repeat;
+}
+
+.no-js #menu {
+    background: url(../images/menu.jpg) center center/cover no-repeat;
+}
+
 #menu {
-    background: url(../images/menu.jpg) no-repeat scroll center center;
-    background-size: cover;
     padding-bottom: 0 !important
 }
 
