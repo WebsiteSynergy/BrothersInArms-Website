@@ -218,6 +218,12 @@ header.masthead .countdown #countdownText {
     margin: 0 auto;
 }
 
+.fb-page iframe {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 .col-sm-3>div:nth-child(1) {
     min-height: 50%
 }
