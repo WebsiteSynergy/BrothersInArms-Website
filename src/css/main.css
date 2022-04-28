@@ -222,6 +222,15 @@ header.masthead .countdown #countdownText {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    position: initial !important;
+}
+
+.fb-page {
+    min-width: 100%;
+}
+
+.fb-page span {
+    width: 100% !important;
 }
 
 .col-sm-3>div:nth-child(1) {
