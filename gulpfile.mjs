@@ -28,7 +28,7 @@ function js(cb) {
   return gulp.src('src/js/**/*.js')
   // The gulp-uglify plugin won't update the filename
       .pipe(uglify())
-      .pipe(gulp.dest('dist/js'))
+      .pipe(gulp.dest('docs/js'))
       .pipe(browserSync.stream());
 }
 
@@ -47,7 +47,7 @@ function css() {
         const buferFile = new CleanCSS(options).minify(file.contents);
         return file.contents = Buffer.from(buferFile.styles);
       })
-      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('docs/css'))
       .pipe(browserSync.stream());
 }
 
@@ -58,21 +58,21 @@ function html(cb) {
         collapseWhitespace: true,
         removeComments: true,
       }))
-      .pipe(gulp.dest('dist'))
+      .pipe(gulp.dest('docs'))
       .pipe(browserSync.stream());
 }
 
 function images(cb) {
   return gulp.src('src/images/**')
   .pipe(image())
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('docs/images'))
   .pipe(browserSync.stream());
 }
 
 async function webpImages() {
-  const outputFolder = 'dist/images/';
+  const outputFolder = 'docs/images/';
 
-	await imagemin(['dist/images/*.png'], {
+	await imagemin(['docs/images/*.png'], {
     destination: outputFolder,
     plugins: [
       imageminWebp({
@@ -81,7 +81,7 @@ async function webpImages() {
     ]
   })
   console.log('PNGs processed')
-  await imagemin(['dist/images/*.{jpg,jpeg}'], {
+  await imagemin(['docs/images/*.{jpg,jpeg}'], {
     destination: outputFolder,
     plugins: [
       imageminWebp({
@@ -94,14 +94,14 @@ async function webpImages() {
 
 // Clean output directory
 function clean(cb) {
-  del('dist');
+  del('docs');
   cb();
 }
 
 export function serve(cb) {
   browserSync.init({
       server: {
-          baseDir: "./dist/"
+          baseDir: "./docs/"
       }
   });
 
