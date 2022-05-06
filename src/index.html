@@ -68,9 +68,17 @@
             <div class="col col-icon right gold-writing">
                 <i class="bi bi-clock"></i>
             </div>
-              <div class="col text-start">
-                <span class="gold-writing">MON-SAT</span>: 7:30AM-6PM<br>
-                <span class="gold-writing">SUN</span>: 8AM-4PM
+              <div class="col text-start" onmouseenter="openingTimesHook();" onclick="openingTimesHook();">
+                <u id="timesTitle">OPENING TIMES</u><br>
+                <span class="gold-writing">MON-WED</span>: <span id="timesTime1">11:30-18:00</span><br>
+                <span class="gold-writing">THU-SAT</span>: <span id="timesTime2">11:30-LATE</span><br>
+                <span class="gold-writing">SUNDAY</span>: <span id="timesTime3">11:30-19:00</span>
+                <noscript>
+                  <u id="timesTitle">FOOD TIMES</u><br>
+                  <span class="gold-writing">MON-WED</span>: <span id="timesTime1">12:00-16:30</span><br>
+                  <span class="gold-writing">THU-SAT</span>: <span id="timesTime2">12:00-20:30</span><br>
+                  <span class="gold-writing">SUNDAY</span>: <span id="timesTime3">11:45-17:30</span>
+                </noscript>
               </div>
             </div>
           </div>
@@ -251,5 +259,6 @@ Ben and the Human Family x
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="sBoEPq0I"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrambling-letters@1.6.2/dist/scrambler.min.js" integrity="sha256-Ub3RAnPn6xU3T8h5dmRkmjKO5kndBxg1fHxrWkUjXtQ=" crossorigin="anonymous"></script>
 </body>
 </html>
