@@ -167,6 +167,10 @@ header.masthead .countdown #countdownText {
         font-size: 4rem
     }
 
+    header .carousel-inner {
+        max-width: 206px;
+    }
+
     .col-icon {
         max-width: 2.7rem !important
     }
@@ -269,6 +273,10 @@ header.masthead .countdown #countdownText {
         padding-top: 20px;
     }
 
+    div.masthead-col:nth-child(3) {
+        padding-top: 20px;
+    }
+
     #about,
     #menu,
     #maps,
@@ -279,6 +287,10 @@ header.masthead .countdown #countdownText {
     #maps,
     #maps .container {
         padding: 0rem;
+    }
+
+    header .carousel-inner {
+        max-width: 195px;
     }
 }
 
