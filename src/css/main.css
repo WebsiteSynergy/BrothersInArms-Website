@@ -292,6 +292,11 @@ header.masthead .countdown #countdownText {
     header .carousel-inner {
         max-width: 195px;
     }
+
+    #menu, #menu .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .webp #menu {
