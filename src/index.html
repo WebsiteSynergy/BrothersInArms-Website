@@ -50,11 +50,11 @@
       </nav>
     <div class="content">
       <header class="masthead">
-        <div class="countdown">
-            OPENING IN:<div id="countdownText">NOW OPEN!!!</div>
-        </div>
         <div class="container-fluid">
-          <div class="row justify-content-center row-cols-1 row-cols-sm-1 row-cols-md-2">
+          <div class="logoMast" style="display:grid; justify-content:center; margin-top:2rem;">
+            <img src="images/navbar.svg" alt="" width="300" height="auto">
+          </div>
+          <div class="mastSpacing row justify-content-center row-cols-1 row-cols-sm-1 row-cols-md-2">
             <div class="col masthead-col">
             <div class="row">
               <div class="col col-icon left gold-writing">
@@ -76,7 +76,7 @@
             <div class="col col-icon right gold-writing">
                 <i class="bi bi-clock"></i>
             </div>
-              <div class="col text-start" style="max-width: max-content;">
+              <div class="col text-start">
                       <u id="timesTitle">OPENING TIMES</u><br>
                       <span class="gold-writing">MON-WED</span>: <span id="timesTime1">11:30-17:00</span><br>
                       <span class="gold-writing">THU-SAT</span>: <span id="timesTime2">11:30-LATE</span><br>
@@ -141,11 +141,40 @@
   </section>
 
   <section class="page-section slide" id="menu">
-    <div class="container">
+    <div class="container-fluid">
       <div class="text-center">
-        <h2 class="section-heading text-uppercase">MENU</h2>
-        <br>
-        <p>MENU COMING SOON!</p><br>
+        <h2 class="section-heading text-uppercase" style="color:saddlebrown; margin-bottom:1rem;"><u>MENU</u></h2>
+        <div id="menuSlides" class="carousel slide" data-bs-ride="carousel">  
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img loading="lazy" src="images/main_menu-1.svg"></img>
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="images/main_menu-2.svg"></img>
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="images/main_menu-3.svg"></img>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#menuSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#menuSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#menuSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>      
+        </div>
+        <div id="menuRow" class="container-fluid">
+          <div class="row">
+            <div class="col-sm">
+              <img loading="lazy" src="images/main_menu-1.svg"></img>
+            </div>
+            <div class="col-sm">
+              <img loading="lazy" src="images/main_menu-2.svg"></img>
+            </div>
+            <div class="col-sm">
+              <img loading="lazy" src="images/main_menu-3.svg"></img>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 </section>

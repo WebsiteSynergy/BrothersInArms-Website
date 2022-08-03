@@ -155,7 +155,7 @@ header.masthead .countdown #countdownText {
 
 @media (min-width:768px) {
     header.masthead {
-        padding-top: 12rem !important;
+        padding-top: 16rem !important;
         padding-bottom: 6rem !important
     }
 
@@ -181,11 +181,11 @@ header.masthead .countdown #countdownText {
         font-size: 1.8rem
     }
 
-    .carousel .carousel-item {
+    #about .carousel .carousel-item {
         height: 250px
     }
 
-    .carousel-item img {
+    #about .carousel-item img {
         position: absolute;
         object-fit: cover;
         top: 0;
@@ -211,6 +211,27 @@ header.masthead .countdown #countdownText {
     #maps,
     #maps {
         scroll-margin-top: 96px;
+    }
+
+    #menuSlides {
+        height: max-content;
+    }
+
+    .logoMast {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    #menuSlides {
+        display: none;
+    }
+
+    #menuRow {
+        margin-top:2rem;
+    }
+
+    #menuRow img {
+        max-width: inherit;
     }
 }
 
@@ -294,22 +315,24 @@ header.masthead .countdown #countdownText {
     header .carousel-inner {
         max-width: 195px;
     }
-}
 
-.webp #menu {
-    background: url(../images/menu.webp) center center/cover no-repeat;
-}
+    .mastSpacing {
+        margin-top: 3rem;
+    }
 
-.no-webp #menu {
-    background: url(../images/menu.jpg) center center/cover no-repeat;
-}
+    #menuSlides img {
+        width:100%;
+    }
 
-.no-js #menu {
-    background: url(../images/menu.jpg) center center/cover no-repeat;
+    #menuRow {
+        display: none;
+    }
 }
 
 #menu {
-    padding-bottom: 0 !important
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: wheat;
 }
 
 #menuIcon {
