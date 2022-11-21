@@ -334,6 +334,10 @@ header.masthead .countdown #countdownText {
         margin-top: 3rem;
     }
 
+    #menu .container-fluid {
+        padding: 0;
+    }
+
     #menuSlides img {
         width:100%;
     }
